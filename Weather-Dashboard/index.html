@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Dashboard | Pinnacle Labs</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-default">
+    <div class="app-container">
+        <!-- Sidebar / Search -->
+        <aside class="sidebar glass-panel">
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search for cities..." autocomplete="off" required>
+                </form>
+                <button id="location-btn" class="location-btn" title="Use my location">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </button>
+            </div>
+
+            <div class="recent-searches">
+                <h3 class="section-title-small">Recent Searches</h3>
+                <ul id="history-list" class="history-list">
+                    <!-- History items will be injected here via JS -->
+                </ul>
+            </div>
+
+            <div class="loader-container hidden" id="loading-indicator">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div class="error-container hidden" id="error-message">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p id="error-text">City not found. Please try again.</p>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard" id="dashboard-main" style="display:none;">
+            <!-- Header (Current Location & Units) -->
+            <header class="dashboard-header">
+                <div class="location-info">
+                    <h1 id="city-name" class="city-name">--</h1>
+                    <p id="date-time" class="date-time">--</p>
+                </div>
+                <div class="unit-toggle">
+                    <button class="unit-btn active" id="btn-c">°C</button>
+                    <button class="unit-btn" id="btn-f">°F</button>
+                </div>
+            </header>
+
+            <!-- Current Weather Hero -->
+            <section class="current-weather glass-panel">
+                <div class="temp-wrapper">
+                    <img id="current-icon" src="" alt="Weather Icon" class="current-icon">
+                    <div class="temp-info">
+                        <h2 id="current-temp" class="current-temp">--°</h2>
+                        <p id="current-condition" class="current-condition">--</p>
+                    </div>
+                </div>
+                <div class="high-low">
+                    <span><i class="fa-solid fa-arrow-up"></i> High: <span id="temp-high">--°</span></span>
+                    <span><i class="fa-solid fa-arrow-down"></i> Low: <span id="temp-low">--°</span></span>
+                </div>
+            </section>
+
+            <div class="grid-layout">
+                <!-- Forecast Section -->
+                <section class="forecast-section">
+                    <h3 class="section-title">3-Day Forecast</h3>
+                    <div class="forecast-container glass-panel" id="forecast-container">
+                        <!-- Forecast items injected via JS -->
+                    </div>
+                </section>
+
+                <!-- Details/Highlights Section -->
+                <section class="details-section">
+                    <h3 class="section-title">Today's Highlights</h3>
+                    <div class="highlights-grid">
+                        <div class="highlight-card glass-panel">
+                            <h4 class="card-title">Wind Status</h4>
+                            <div class="card-value"><span id="wind-speed">--</span> <span class="unit">km/h</span></div>
+                            <div class="card-footer"><i class="fa-regular fa-compass"></i> <span id="wind-dir">--</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card glass-panel">
+                            <h4 class="card-title">Humidity</h4>
+                            <div class="card-value"><span id="humidity">--</span> <span class="unit">%</span></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="humidity-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="highlight-card glass-panel">
+                            <h4 class="card-title">Visibility</h4>
+                            <div class="card-value"><span id="visibility">--</span> <span class="unit">km</span></div>
+                        </div>
+                        <div class="highlight-card glass-panel">
+                            <h4 class="card-title">UV Index</h4>
+                            <div class="card-value max-value"><span id="uv-index">--</span></div>
+                            <div class="card-footer"><i class="fa-solid fa-sun" style="color:#facc15"></i> UV Strength
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
