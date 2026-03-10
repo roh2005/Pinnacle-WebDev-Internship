@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Fine Dining & Events</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AURA<span>.</span></a>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#reservations" class="btn-nav">Book a Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h4 class="fade-in">Experience Culinary Excellence</h4>
+            <h1 class="fade-in delay-1">Aura Fine Dining</h1>
+            <p class="fade-in delay-2">Where traditional flavors meet modern gastronomy in an unforgettable atmosphere.
+            </p>
+            <div class="hero-btns fade-in delay-3">
+                <a href="#menu" class="btn btn-outline">Explore Menu</a>
+                <a href="#reservations" class="btn btn-primary">Make a Reservation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h4 class="section-subtitle">Since 2010</h4>
+                <h2 class="section-title">A Journey of Taste</h2>
+                <p>Located in the heart of the city, Aura offers an unrivaled dining experience. Our executive chefs
+                    source only the finest seasonal ingredients from local farms to craft dishes that are both visually
+                    stunning and exquisitely flavorful.</p>
+                <p>Whether you're celebrating a special occasion or simply desiring an extraordinary meal, our dedicated
+                    staff ensures every moment is perfect.</p>
+                <img src="https://images.unsplash.com/photo-1577106263724-2c8e03bfe9cf?auto=format&fit=crop&w=400&q=80"
+                    alt="Chef signature" class="chef-sig">
+            </div>
+            <div class="about-image">
+                <!-- Image of a beautiful plate -->
+                <img src="https://images.unsplash.com/photo-1544025162-83161c9e830f?auto=format&fit=crop&w=800&q=80"
+                    alt="Exquisite culinary dish" class="image-stack-top">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80"
+                    alt="Restaurant interior" class="image-stack-bottom">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section (CodSoft Focus) -->
+    <section class="menu section-padding bg-darker" id="menu">
+        <div class="container">
+            <div class="text-center">
+                <h4 class="section-subtitle">Discover Our</h4>
+                <h2 class="section-title">Exquisite Menu</h2>
+            </div>
+
+            <!-- Menu Filtering -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Main Courses</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+
+                <!-- Item 1: Starter -->
+                <div class="menu-item starters">
+                    <img src="https://images.unsplash.com/photo-1626079965410-674513101c64?auto=format&fit=crop&w=400&q=80"
+                        alt="Truffle Carpaccio" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Truffle Beef Carpaccio</h3>
+                            <span class="menu-price">$24</span>
+                        </div>
+                        <p class="menu-desc">Thinly sliced wagyu, shaved black truffle, aged parmesan, capers, and extra
+                            virgin olive oil.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Starter -->
+                <div class="menu-item starters">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=80"
+                        alt="Scallops" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Pan-Seared Scallops</h3>
+                            <span class="menu-price">$22</span>
+                        </div>
+                        <p class="menu-desc">Hokkaido scallops, cauliflower purée, crispy pancetta, and citrus beurre
+                            blanc.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Main -->
+                <div class="menu-item mains">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=400&q=80"
+                        alt="Filet Mignon" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Heritage Filet Mignon</h3>
+                            <span class="menu-price">$55</span>
+                        </div>
+                        <p class="menu-desc">8oz prime cut, roasted rainbow carrots, fondant potatoes, and a rich red
+                            wine demi-glace.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Main -->
+                <div class="menu-item mains">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=400&q=80"
+                        alt="Salmon" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Wild Caught Salmon</h3>
+                            <span class="menu-price">$42</span>
+                        </div>
+                        <p class="menu-desc">Miso-glazed king salmon, wild mushroom risotto, asparagus, and saffron
+                            infused foam.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Dessert -->
+                <div class="menu-item desserts">
+                    <img src="https://images.unsplash.com/photo-1624353365286-a5170ef0209e?auto=format&fit=crop&w=400&q=80"
+                        alt="Chocolate Dome" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Valrhona Chocolate Dome</h3>
+                            <span class="menu-price">$16</span>
+                        </div>
+                        <p class="menu-desc">Dark chocolate shell, hazelnut praline core, served with warm salted
+                            caramel sauce.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Dessert -->
+                <div class="menu-item desserts">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=400&q=80"
+                        alt="Crème Brûlée" class="menu-img">
+                    <div class="menu-details">
+                        <div class="menu-header">
+                            <h3 class="menu-name">Madagascar Vanilla Crème Brûlée</h3>
+                            <span class="menu-price">$14</span>
+                        </div>
+                        <p class="menu-desc">Classic creamy custard topped with a perfect layer of caramelized sugar and
+                            fresh berries.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events section-padding" id="events">
+        <div class="container">
+            <div class="text-center">
+                <h4 class="section-subtitle">Gather & Celebrate</h4>
+                <h2 class="section-title">Upcoming Events</h2>
+                <p class="max-w-600 mx-auto">Join us for our exclusive dining experiences, featuring live entertainment
+                    and curated tasting menus designed to delight the senses.</p>
+            </div>
+
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">MAY</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Jazz & Wine Pairing Night</h3>
+                        <p>Enjoy a beautiful evening of live jazz music performed by local artists, perfectly
+                            accompanied by a 5-course tasting menu and sommelier-selected wine pairings.</p>
+                        <a href="#reservations" class="btn-text">Reserve a Spot <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">28</span>
+                        <span class="month">MAY</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Chef's Experimental Table</h3>
+                        <p>An exclusive 12-seat experience where Executive Chef Marcus unveils next season's culinary
+                            creations. A highly interactive, behind-the-scenes look at fine dining.</p>
+                        <a href="#reservations" class="btn-text">Reserve a Spot <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section class="reservations section-padding bg-darker" id="reservations">
+        <div class="container reservation-flex">
+            <div class="res-image">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80"
+                    alt="Romantic table setting">
+            </div>
+
+            <div class="res-form-container">
+                <h4 class="section-subtitle">Secure Your Spot</h4>
+                <h2 class="section-title">Book a Table</h2>
+                <p style="margin-bottom: 2rem;">Reservations are highly recommended. For parties larger than 8, please
+                    contact us directly by phone.</p>
+
+                <form id="reservation-form" class="res-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" required>
+                                <option value="1">1 Person</option>
+                                <option value="2" selected>2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7 People</option>
+                                <option value="8">8 People</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Time</label>
+                            <select id="time" required>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00" selected>7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                                <option value="22:00">10:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
+
+                    <div id="form-success" class="form-success hidden">
+                        <i class="fa-solid fa-circle-check"></i> Thank you! Your reservation has been confirmed. We look
+                        forward to serving you.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">AURA<span>.</span></a>
+                <p>An unforgettable journey of culinary delight in the heart of the city.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Culinary Avenue, Food District, NY 10001</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (212) 555-0199</p>
+                <p><i class="fa-solid fa-envelope"></i> reservations@auradining.com</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p><strong>Mon - Thu:</strong> 5:00 PM - 10:30 PM</p>
+                <p><strong>Fri - Sat:</strong> 5:00 PM - 11:30 PM</p>
+                <p><strong>Sunday:</strong> 4:00 PM - 10:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Aura Fine Dining. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
